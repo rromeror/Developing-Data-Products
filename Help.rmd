@@ -1,0 +1,31 @@
+---
+title: "Internet Tariff Calculator"
+date: "Saturday, September 20, 2014"
+output: html_document
+---
+
+When you sign a contract for an internet connection you are posed the problem of deciding which tariff suits your needs the best. Network operators design their tariff rules so as to optimize not only their net profit, but the utilization of their network resources. In general, a tariff for an internet access link comprises two components, namely,
+
+1. Fixed charge. It is the monthly fee you pay for your connection to be available, and represents the cost you are charged due to the network resources the operator has to reserve in order to guarantee the contract obligations. This cost is not dependent on the **usage** or **volume of information** you transfer per month.
+
+2. Usage charge. This cost component reflects the traffic volume you actually send to and receive from the internet. Therefore, this charge depends on the amount of data, measured in **Giga Bytes**, you transfer on your internet channel.
+
+The total charge per month equals the summation of these two components. When you seek for an internet plan, you are presented a set of tariff alternatives by the network operator. These pricing options are designed to encourage the user to select,in a self-interested way, his/her true **expected traffic volume**. If you fail to estimate your traffic volume then you will end up being charged more.
+
+The application has the goal of illustrating how this tariffs are designed. Therefore, using an arbitrarily predetermined currency, called `cost unit [cu]`, you just need to enter the max speed in Mbps (Mega bits per second) of your internet connection.As in reality the monthly average speed is the variable that estimates the actual usage you are doing of your internet channel,then it determines the volume of information generated/sent. With the help of the `slider` vary the mean rate of your channel (which can only vary between 0 and the max speed) so you can see and analise the following output,
+
+1. The values *Total [cu/month]*, *Fixed [cu/month]* and *Usage [cu/month]* are the total charge and its components respectively, whereas the values *Fixed [%]* and *Usage [%]* show the proportional contributions of each cost type to the monthly cost.
+
+2. *Volume [GBytes/month]* is the amount of data you can transfer per month with an average speed of *Mean speed [Mbps/month]*. The parameter *Utilization [hours/month]* is an indicator of the percentage of time you are actually using your internet channel provided that you demand a volume of information given by *Volume [GBytes/month]*. 
+
+3. The plot illustrates the existing dependency of the tariff with the *Mean speed [Mbps/month]* of your channel, i.e. with the actual usage of the connection.
+
+You can play around with the tool so as to figure out how your charge changes as you vary the *Volume [GBytes/month]* of information you demand from the network. 
+
+As an example, today, a mobile operator can offer an LTE internet access with the following contract parameters: 10 GBytes/month, 150 Mbps max speed. If you try to guess the corresponding average rate with the tool, you will notice that with a mean rate of 0.2 Mbps, i.e 200 Kbps, you have a volume of information per month of 65.7 GBytes (6.5 times higher than the proposed plan), which means that you are actually using your channel less than 2.92 Hours/month. This result shows that although advertisements attempt to lure users with *super high speeds*, in really all users are confined to be in the region of the curve close to "zero", in other words, customers actually do operate at very low average bit rates.
+
+
+
+
+
+
